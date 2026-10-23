@@ -5,12 +5,16 @@ pipeline {
     
         }
     }
+    environment{
+        COURSE = "Jenkins"
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                        echo "Building"
+                       echo $COURSE
 
                     """
                 }
@@ -22,6 +26,7 @@ pipeline {
                 script{
                     sh """
                        echo "Testing"
+                       echo $COURSE
 
                     """
                 }
@@ -32,6 +37,7 @@ pipeline {
                script{
                     sh """
                        echo "Deploying"
+                       echo $COURSE
 
                     """
                 }
