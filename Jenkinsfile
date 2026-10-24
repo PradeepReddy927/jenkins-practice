@@ -8,7 +8,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building"
+                script{
+                    sh """
+                       echo "Building"
+                    """
+                 
+                }    
             }
         }
         stage('Test') {
