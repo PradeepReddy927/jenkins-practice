@@ -12,15 +12,15 @@ pipeline {
     options {
         // Timeout counter starts BEFORE agent is allocated      
         timeout(time: 10, unit: 'MINUTES') 
-        disableConcurrentBuilds()       
+        // disableConcurrentBuilds()       
     }
-     parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
-        booleanParam(name: 'DEPLOY', defaultValue: false, description: 'Toggle this value')
-        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
-    }
+    // parameters {
+    //     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+    //     text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+    //     booleanParam(name: 'DEPLOY', defaultValue: false, description: 'Toggle this value')
+    //     choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+    //     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    // }
     // This is Build sectioned
     stages {
         stage('Build') {
@@ -64,9 +64,9 @@ pipeline {
             //         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
             //     }
             // }
-            when { 
-                expression { "$params.DEPLOY" == "true" }
-            }
+            // when { 
+            //     expression { "$params.DEPLOY" == "true" }
+            // }
             steps {
                script{
                     sh """
