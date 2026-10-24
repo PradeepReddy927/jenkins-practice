@@ -23,6 +23,7 @@ pipeline {
 
     
     }
+    // This is build section
     stages {
         stage('Build') {
             steps {
