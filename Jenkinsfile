@@ -5,12 +5,16 @@ pipeline {
     
         }
     }
+    environment {
+        COURSE = "Jenkins"
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                        echo "Building"
+                       $COURSE
                     """
                  
                 }    
