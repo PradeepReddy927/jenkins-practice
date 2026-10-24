@@ -20,7 +20,7 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-
+    // This is Build section 
     stages {
         stage('Build') {
             steps {
@@ -30,7 +30,7 @@ pipeline {
                        echo $COURSE
                        sleep 10
                        env
-                       
+
                         echo "Hello ${params.PERSON}"
                         echo "Biography: ${params.BIOGRAPHY}"
                         echo "Toggle: ${params.TOGGLE}"
