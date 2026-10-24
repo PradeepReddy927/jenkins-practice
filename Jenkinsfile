@@ -8,9 +8,10 @@ pipeline {
     environment {
         COURSE = "Jenkins"
     }
-     options {
-        // Timeout counter starts AFTER agent is allocated
+    options {
+      
         timeout(time: 10, unit: 'SECONDS')
+    }    
     stages {
         stage('Build') {
             steps {
