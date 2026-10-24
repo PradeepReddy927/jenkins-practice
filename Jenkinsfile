@@ -29,14 +29,14 @@ pipeline {
                     sh """
                        echo "Building"
                        echo $COURSE
-                       sleep 10
+                        #sleep 10
                        env
 
-                        echo "Hello ${params.PERSON}"
-                        echo "Biography: ${params.BIOGRAPHY}"
-                        echo "Toggle: ${params.DEPLOY}"
-                        echo "Choice: ${params.CHOICE}"
-                        echo "Password: ${params.PASSWORD}"
+                        // echo "Hello ${params.PERSON}"
+                        // echo "Biography: ${params.BIOGRAPHY}"
+                        // echo "Toggle: ${params.DEPLOY}"
+                        // echo "Choice: ${params.CHOICE}"
+                        // echo "Password: ${params.PASSWORD}"
 
 
                     """
