@@ -14,7 +14,7 @@ pipeline {
                 script{
                     sh """
                        echo "Building"
-                       $COURSE
+                       echo $COURSE
                     """
                  
                 }    
